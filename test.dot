@@ -1,0 +1,13 @@
+digraph Lotto {
+    rankdir=TB;
+    node [shape=record,height=.1];
+
+    Lotto [label="Lotto|{numbersToDraw, maxNumber, numbers, frequency, filename}|{Lotto(), generateNumbers(), enterNumbers(), printNumbers(), printFrequency(), setNumbersToDraw(), setMaxNumber(), saveNumbers(), loadNumbers()}"];
+    Lotto6aus49 [label="Lotto6aus49|{}|{Lotto6aus49()}"];
+    Eurolotto [label="Eurolotto|{}|{Eurolotto()}"];
+
+    Lotto6aus49:Lotto6aus49 -> Lotto:Lotto [arrowhead=empty];
+    Eurolotto:Eurolotto -> Lotto:Lotto [arrowhead=empty];
+
+    Lotto:loadNumbers -> Lotto:loadNumbers [dir=back, arrowhead=none, label="if file exists"];
+}

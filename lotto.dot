@@ -1,0 +1,12 @@
+digraph LottoProgram {
+    node [shape=box, style=filled, fillcolor=lightblue];
+    
+    Lotto [label="Lotto"];
+    Lotto6Aus49 [label="Lotto 6 aus 49"];
+    Lotto5Aus50 [label="Lotto 5 aus 50"];
+    Lotto2Aus12 [label="Lotto 2 aus 12"];
+    
+    Lotto -> Lotto6Aus49;
+    Lotto -> Lotto5Aus50;
+    Lotto -> Lotto2Aus12;
+}
